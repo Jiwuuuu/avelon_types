@@ -1,0 +1,33 @@
+{
+  "name": "@avelon_capstone/types",
+  "version": "1.0.0",
+  "description": "Shared TypeScript types for Avelon platform",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "avelon",
+    "types",
+    "typescript",
+    "blockchain",
+    "lending"
+  ],
+  "author": "Avelon Team",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avelon/avelon_types.git"
+  }
+}
