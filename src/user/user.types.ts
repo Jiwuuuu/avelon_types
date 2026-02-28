@@ -14,14 +14,14 @@ export enum UserRole {
 export enum UserStatus {
     /** Email not verified */
     REGISTERED = 'REGISTERED',
-    /** Email verified, no wallet connected */
+    /** Email verified, no KYC submitted */
     VERIFIED = 'VERIFIED',
-    /** Wallet connected, no KYC submitted */
-    CONNECTED = 'CONNECTED',
     /** KYC documents submitted, awaiting AI review */
     PENDING_KYC = 'PENDING_KYC',
-    /** KYC approved, can borrow */
+    /** KYC approved, can connect wallet */
     APPROVED = 'APPROVED',
+    /** Wallet connected, can borrow */
+    CONNECTED = 'CONNECTED',
     /** KYC rejected, can resubmit */
     REJECTED = 'REJECTED',
     /** Account frozen by admin */
