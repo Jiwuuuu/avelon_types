@@ -6,8 +6,12 @@
  * Document type enumeration
  */
 export enum DocumentType {
-    /** Government-issued ID (Driver's License, Passport, etc.) */
+    /** Government-issued ID front (Driver's License, Passport, etc.) */
     GOVERNMENT_ID = 'GOVERNMENT_ID',
+    /** Government-issued ID back */
+    GOVERNMENT_ID_BACK = 'GOVERNMENT_ID_BACK',
+    /** Electronic signature */
+    E_SIGNATURE = 'E_SIGNATURE',
     /** Proof of income (Payslip, Bank Statement, etc.) */
     PROOF_OF_INCOME = 'PROOF_OF_INCOME',
     /** Proof of address (Utility Bill, Bank Statement, etc.) */
