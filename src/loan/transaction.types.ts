@@ -4,30 +4,23 @@
 
 /**
  * Transaction type enumeration
+ * Matches Prisma TransactionType enum
  */
 export enum LoanTransactionType {
     /** Collateral deposited */
     COLLATERAL_DEPOSIT = 'COLLATERAL_DEPOSIT',
+    /** Loan disbursed to borrower */
+    LOAN_DISBURSEMENT = 'LOAN_DISBURSEMENT',
+    /** Repayment made */
+    REPAYMENT = 'REPAYMENT',
     /** Additional collateral added */
     COLLATERAL_TOPUP = 'COLLATERAL_TOPUP',
-    /** Loan disbursed to borrower */
-    DISBURSEMENT = 'DISBURSEMENT',
-    /** Partial repayment made */
-    REPAYMENT = 'REPAYMENT',
-    /** Full repayment completed */
-    FULL_REPAYMENT = 'FULL_REPAYMENT',
     /** Collateral returned after repayment */
-    COLLATERAL_RELEASE = 'COLLATERAL_RELEASE',
+    COLLATERAL_RETURN = 'COLLATERAL_RETURN',
     /** Liquidation executed */
     LIQUIDATION = 'LIQUIDATION',
-    /** Surplus returned after liquidation */
-    SURPLUS_RETURN = 'SURPLUS_RETURN',
-    /** Extension fee paid */
-    EXTENSION_FEE = 'EXTENSION_FEE',
-    /** Origination fee deducted */
-    ORIGINATION_FEE = 'ORIGINATION_FEE',
-    /** Late fee applied */
-    LATE_FEE = 'LATE_FEE',
+    /** Fee payment (origination, late, extension) */
+    FEE_PAYMENT = 'FEE_PAYMENT',
 }
 
 /**
