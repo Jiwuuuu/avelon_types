@@ -16,22 +16,21 @@ export enum DocumentType {
     PROOF_OF_INCOME = 'PROOF_OF_INCOME',
     /** Proof of address (Utility Bill, Bank Statement, etc.) */
     PROOF_OF_ADDRESS = 'PROOF_OF_ADDRESS',
+    /** Selfie for identity verification */
+    SELFIE = 'SELFIE',
 }
 
 /**
  * Document verification status
+ * Matches Prisma DocumentStatus enum
  */
 export enum DocumentStatus {
     /** Document uploaded, awaiting verification */
     PENDING = 'PENDING',
-    /** Document being processed by AI */
-    PROCESSING = 'PROCESSING',
-    /** Document verified successfully */
-    VERIFIED = 'VERIFIED',
+    /** Document approved */
+    APPROVED = 'APPROVED',
     /** Document rejected */
     REJECTED = 'REJECTED',
-    /** Document expired */
-    EXPIRED = 'EXPIRED',
 }
 
 /**
