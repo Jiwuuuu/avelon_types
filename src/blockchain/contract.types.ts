@@ -4,13 +4,14 @@
 
 /**
  * Contract addresses configuration
+ * Matches env vars: AVELON_LENDING_ADDRESS, COLLATERAL_MANAGER_ADDRESS,
+ * REPAYMENT_SCHEDULE_ADDRESS, TREASURY_ADDRESS
  */
 export interface ContractAddresses {
-    avelonCore: string;
-    loanManager: string;
-    treasury: string;
-    priceOracle: string;
-    accessControl: string;
+    avelonLending: string;
+    collateralManager: string;
+    repaymentSchedule: string;
+    treasury?: string;
 }
 
 /**

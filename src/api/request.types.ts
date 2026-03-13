@@ -56,6 +56,6 @@ export interface TransactionListRequest extends ListRequest, DateRangeFilter {
  * Notification list request
  */
 export interface NotificationListRequest extends PaginationParams {
-    read?: boolean;
+    unread?: boolean;
     type?: string;
 }
