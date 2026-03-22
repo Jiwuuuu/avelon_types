@@ -119,27 +119,24 @@ export interface KYCSubmitRequest {
 }
 
 /**
+ * A single verified/uploaded KYC document
+ */
+export interface KYCDocument {
+    documentId: string;
+    type: 'GOVERNMENT_ID' | 'GOVERNMENT_ID_BACK' | 'PROOF_OF_INCOME' | 'PROOF_OF_ADDRESS' | 'SELFIE' | 'E_SIGNATURE';
+    status: 'PENDING' | 'APPROVED' | 'REJECTED';
+    fileName: string;
+    aiVerified: boolean;
+    aiConfidence: number | null;
+    createdAt: Date;
+}
+
+/**
  * KYC status response
  */
 export interface KYCStatusResponse {
     status: VerificationStatus;
-    documents: {
-        governmentId: {
-            uploaded: boolean;
-            verified: boolean;
-            documentId: string | null;
-        };
-        proofOfIncome: {
-            uploaded: boolean;
-            verified: boolean;
-            documentId: string | null;
-        };
-        proofOfAddress: {
-            uploaded: boolean;
-            verified: boolean;
-            documentId: string | null;
-        };
-    };
+    documents: KYCDocument[];
     creditScore: number | null;
     creditTier: CreditTier | null;
     verifiedAt: Date | null;
