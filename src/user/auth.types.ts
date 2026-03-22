@@ -2,6 +2,8 @@
  * Authentication-related types
  */
 
+import { UserRole } from './user.types.js';
+
 /**
  * Login credentials
  */
@@ -17,6 +19,7 @@ export interface RegisterData {
     email: string;
     password: string;
     name?: string;
+    role?: UserRole.BORROWER | UserRole.INVESTOR;
 }
 
 /**

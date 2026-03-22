@@ -1,10 +1,11 @@
 /**
  * User role enumeration
- * Only two roles in Avelon: Admin and Borrower
  */
 export enum UserRole {
     ADMIN = 'ADMIN',
     BORROWER = 'BORROWER',
+    /** Liquidity provider who supplies crypto to the shared pool */
+    INVESTOR = 'INVESTOR',
 }
 
 /**

@@ -22,3 +22,6 @@ export * from './api';
 
 // Blockchain module
 export * from './blockchain';
+
+// Investor / liquidity pool module
+export * from './investor';
