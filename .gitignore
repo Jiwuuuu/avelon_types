@@ -23,3 +23,7 @@ npm-debug.log*
 .env.local
 
 docs
+
+# Claude Code
+CLAUDE.md
+.claude/
