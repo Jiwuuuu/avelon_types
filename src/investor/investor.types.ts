@@ -45,6 +45,10 @@ export interface PoolStats {
     /** Number of loans funded from the pool */
     activeLoans: number;
     lastUpdated: Date;
+    /** Smallest deposit the pool accepts, decimal ETH; null when the pool predates limits */
+    minDeposit: string | null;
+    /** Largest single deposit the pool accepts, decimal ETH; null when the pool predates limits */
+    maxDeposit: string | null;
 }
 
 // ── Pool Transactions ──────────────────────────────────────────────────────
