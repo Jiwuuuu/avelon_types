@@ -7,6 +7,8 @@
  */
 export enum LoanStatus {
     /** Awaiting collateral deposit */
+    PENDING_APPROVAL = 'PENDING_APPROVAL',
+    REJECTED = 'REJECTED',
     PENDING_COLLATERAL = 'PENDING_COLLATERAL',
     /** Collateral received, processing disbursement */
     COLLATERAL_DEPOSITED = 'COLLATERAL_DEPOSITED',
@@ -32,7 +34,7 @@ export enum CollateralHealth {
     WARNING = 'WARNING',
     /** 120-129% ratio */
     CRITICAL = 'CRITICAL',
-    /** <120% ratio - liquidation pending */
+    /** Legacy risk label only; collateral ratio does not trigger liquidation */
     LIQUIDATION = 'LIQUIDATION',
 }
 
@@ -51,6 +53,7 @@ export interface Loan {
 
     // Loan Details
     principal: number;
+    purpose: string;
     collateralRequired: number;
     collateralDeposited: number;
     duration: number;
@@ -90,6 +93,7 @@ export interface LoanApplicationRequest {
     amount: number;
     duration: number;
     walletId: string;
+    purpose: string;
 }
 
 /**
